@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import List from './components/List';
 
 function App() {
+  const [data, setData] = useState([]);
+  const [text, setText] = useState('');
+  const [editing, setEditing] = useState(null);
+
+  const onChangeHandler = (event) => {
+    setText(event.target.value);
+  };
+
+  const onAdd = () => {
+    setData([...data, text]);
+    setText('');
+  };
+
+  const onEdit = (index) => {
+    setEditing(index);
+  };
+
+  const onDelete = (index) => {
+    setData(data.filter((item, i) => i!== index));
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <main>
+        <List data={data} onEdit={onEdit} onDelete={onDelete} />
+      </main>
     </div>
   );
 }

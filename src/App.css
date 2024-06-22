@@ -36,3 +36,50 @@
     transform: rotate(360deg);
   }
 }
+
+/* Add the following styles to your CSS file */
+
+.form-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.add-btn, .edit-btn, .delete-btn, .save-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.add-btn {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.edit-btn {
+  background-color: #FFC107;
+  color: #fff;
+}
+
+.delete-btn {
+  background-color: #FF3737;
+  color: #fff;
+}
+
+.save-btn {
+  background-color: #2ECC71;
+  color: #fff;
+}
+
+li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+li button {
+  margin-left: 10px;
+}
