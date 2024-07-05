@@ -1,6 +1,18 @@
-import React, { useState } from 'react';
+import React, { useImperativeHandle, useState } from 'react';
 import './App.css';
 import List from './components/List';
+import Navbar from './components/Navbar';
+import About from './components/About';
+import Text from './components/Text';
+import Home from './components/Home';
+// import DarkModeToggle from '/DarkModeToggle';
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Link
+} from "react-router-dom";
 
 function App() {
   const [data, setData] = useState([]);
@@ -21,15 +33,20 @@ function App() {
   };
 
   const onDelete = (index) => {
-    setData(data.filter((item, i) => i!== index));
+    setData(data.filter((item, i) => i !== index));
   };
 
   return (
-    <div className="App">
-      <main>
-        <List data={data} onEdit={onEdit} onDelete={onDelete} />
-      </main>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/about" element={<About />} />
+        <Route path="/list" element={<List />} />
+        <Route path="/text" element={<Text />} />
+        <Route path="/" element={<Home />} />
+        {/* <DarkModeToggle /> */}
+      </Routes>
+    </Router>
   );
 }
 

@@ -83,3 +83,13 @@ li {
 li button {
   margin-left: 10px;
 }
+
+/* App.css or component's CSS file */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .my-component-specific-class {
+  /* Additional dark mode styles for specific components */
+}

@@ -6,16 +6,30 @@ function List() {
   const [newItem, setNewItem] = useState(''); // new item value for editing
   const [email, setEmail] = useState([]); // email data
   const [emailData, setEmailData] = useState(''); // new email value for editing
+  const [link, setLink] = useState([]); // link data
+  const [linkData, setLinkData] = useState(''); // new link value for editing
+  const [password, setPassword] = useState([]); // password data
+  const [newPass, setNewPass] = useState(''); // new password value for editing
   const [combinedData, setCombinedData] = useState([]); // combined data
 
   const handleEmailChange = (event) => {
     setEmailData(event.target.value);
   };
 
+  const handleLinkChange = (event) => {
+    setLinkData(event.target.value);
+  };
+
+  const handlePassChange = (event) => {
+    setNewPass(event.target.value);
+  };
+
   const handleEdit = (index) => {
     setEditingIndex(index);
     setNewItem(data[index]);
     setEmailData(email[index]);
+    setLinkData(link[index]);
+    setNewPass(password[index]);
   };
 
   const handleSave = (index) => {
@@ -27,13 +41,23 @@ function List() {
     newEmail[index] = emailData;
     setEmail(newEmail);
 
+    const newLink = [...link];
+    newLink[index] = linkData;
+    setLink(newLink);
+
+    const newPassword = [...password];
+    newPassword[index] = newPass;
+    setPassword(newPassword);
+
     const newCombinedData = [...combinedData];
-    newCombinedData[index] = { name: newItem, email: emailData };
+    newCombinedData[index] = { name: newItem, email: emailData, link: linkData, password: newPass };
     setCombinedData(newCombinedData);
 
     setEditingIndex(null);
     setNewItem('');
     setEmailData('');
+    setLinkData('');
+    setNewPass('');
   };
 
   const handleDelete = (index) => {
@@ -41,9 +65,17 @@ function List() {
     newData.splice(index, 1);
     setData(newData);
 
+    const newLink = [...link];
+    newLink.splice(index, 1);
+    setLink(newLink);
+
     const newEmail = [...email];
     newEmail.splice(index, 1);
     setEmail(newEmail);
+
+    const newPassword = [...password];
+    newPassword.splice(index, 1);
+    setPassword(newPassword);
 
     const newCombinedData = [...combinedData];
     newCombinedData.splice(index, 1);
@@ -53,6 +85,8 @@ function List() {
       setEditingIndex(null);
       setNewItem('');
       setEmailData('');
+      setLinkData('');
+      setNewPass('');
     }
   };
 
@@ -61,13 +95,17 @@ function List() {
 
     setData([...data, newItem]);
     setEmail([...email, emailData]);
-    setCombinedData([...combinedData, { name: newItem, email: emailData }]);
+    setLink([...link, linkData]);
+    setPassword([...password, newPass]);
+    setCombinedData([...combinedData, { name: newItem, email: emailData, link: linkData, password: newPass }]);
     setNewItem('');
     setEmailData('');
+    setLinkData('');
+    setNewPass('');
   };
 
   return (
-    <div className='container'>
+ <div className='container'>
       <form onSubmit={handleAdd} style={{ marginBottom: '20px' }}>
         <input
           type="text"
@@ -85,6 +123,22 @@ function List() {
           className='form-input'
         />
 
+        <input
+          type="text"
+          value={linkData}
+          onChange={handleLinkChange}
+          placeholder="Enter Your Link"
+          className='form-input'
+        />
+
+        <input
+          type="text"
+          value={newPass}
+          onChange={handlePassChange}
+          placeholder="Enter Your Password"
+          className='form-input'
+        />
+
         <button
           type="submit"
           className="add-btn"
@@ -97,6 +151,8 @@ function List() {
           <tr style={{ borderBottom: '1px solid #ccc' }}>
             <th style={{ padding: '10px', textAlign: 'left' }}>Name</th>
             <th style={{ padding: '10px', textAlign: 'left' }}>Email</th>
+            <th style={{ padding: '10px', textAlign: 'left' }}>Link</th>
+            <th style={{ padding: '10px', textAlign: 'left' }}>Password</th>
             <th style={{ padding: '10px' }}>Actions</th>
           </tr>
         </thead>
@@ -127,6 +183,32 @@ function List() {
                   />
                 ) : (
                   <span>{value.email}</span>
+                )}
+              </td>
+              <td style={{ padding: '10px', textAlign: 'left' }}>
+                {editingIndex === index ? (
+                  <input
+                    type="text"
+                    value={linkData}
+                    onChange={handleLinkChange}
+                    className='form-input'
+                    style={{ width: '100%' }}
+                  />
+                ) : (
+                  <span>{value.link}</span>
+                )}
+              </td>
+              <td style={{ padding: '10px', textAlign: 'left' }}>
+                {editingIndex === index ? (
+                  <input
+                    type="password"
+                    value={newPass}
+                    onChange={handlePassChange}
+                    className='form-input'
+                    style={{ width: '100%' }}
+                  />
+                ) : (
+                  <span>{value.password}</span>
                 )}
               </td>
               <td style={{ padding: '10px', textAlign: 'center' }}>
