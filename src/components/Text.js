@@ -26,9 +26,9 @@ function About() {
           {showMessage ? 'Hide Message' : 'Show Message'}
         </button>
 
-        <button className="btn btn-danger" onClick={() => setShowText(!showText)}>
+        {/* <button className="btn btn-danger" onClick={() => setShowText(!showText)}>
           {showText ? 'Message Visible' : 'Message Not Visible'}
-        </button>
+        </button> */}
       </div>
 
       {showMessage && (

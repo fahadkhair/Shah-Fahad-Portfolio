@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import image from './images/DP11.jpg';
+import image from './images/DP14.jpg';
 
 function About() {
   const [text, setText] = useState();

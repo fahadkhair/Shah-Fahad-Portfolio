@@ -4,7 +4,7 @@ import List from './components/List';
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Text from './components/Text';
-import Home from './components/Home';
+import ButtonChange from './components/ButtonChange';
 // import DarkModeToggle from '/DarkModeToggle';
 
 import {
@@ -43,7 +43,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/list" element={<List />} />
         <Route path="/text" element={<Text />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/ButtonChange" element={<ButtonChange />} />
         {/* <DarkModeToggle /> */}
       </Routes>
     </Router>
