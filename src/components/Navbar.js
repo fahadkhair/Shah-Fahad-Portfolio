@@ -6,7 +6,7 @@ import logo from './images/Logo.png'
 export default function Navbar() {
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+            <nav className="navbar navbar-expand-lg navbar-dark bg: #001660">
                 <div className="container-fluid">
                     <img src={logo} className="fa fa-home" style={{ color: 'white', fontWeight: 'bold', width: '80px' }} />
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,10 +39,10 @@ export default function Navbar() {
                                 <Link className="nav-link" style={{ color: 'white', fontWeight: 'bold' }} to="/About">About</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" style={{ color: 'white', fontWeight: 'bold' }} to="/components/Contact/Contact">Contact</Link>
+                                <Link className="nav-link" style={{ color: 'white', fontWeight: 'bold' }} to="/Contact">Contact</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" style={{ color: 'white', fontWeight: 'bold' }} to="/components/LoginSignUp/LoginSignup">Login</Link>
+                                <Link className="nav-link" style={{ color: 'white', fontWeight: 'bold' }} to="/Login">Login</Link>
                             </li>
                         </ul>
                     </div>

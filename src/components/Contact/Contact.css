@@ -1,13 +1,13 @@
 .container-cnt{
     width: 100%;
-    height: 100vh;
-    background: #001660;
+    height: 90vh;
+    /* background: #001660; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-form{
+.form-cnt{
     background: #fff;
     display: flex;
     flex-direction: column;
@@ -17,13 +17,13 @@ form{
     border-radius: 10px;
 }
 
-form h3{
+.form-cnt h3{
     color: #555;
     font-weight: 800;
     margin-bottom: 20px;
 }
 
-form input, form textarea {
+.form-cnt input, .form-cnt textarea {
     border: 0;
     margin: 10px 0;
     padding: 20px;

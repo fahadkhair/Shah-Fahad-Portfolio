@@ -1,4 +1,13 @@
 .container-login {
+    width: 100%;
+    height: 100vh;
+    /* background: #001660; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.context-login {
     display: flex;
     flex-direction: column;
     margin: auto;

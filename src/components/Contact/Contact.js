@@ -5,7 +5,7 @@ const Contact = () => {
 
     return (
         <div className="container-cnt">
-            <form>
+            <form className='form-cnt'>
                 <h3>GET IN TOUCH</h3>
                 <input type="text" id='name-cnt' placeholder='Your Name' required />
                 <input type="email" id='email-cnt' placeholder='Email ID' required />

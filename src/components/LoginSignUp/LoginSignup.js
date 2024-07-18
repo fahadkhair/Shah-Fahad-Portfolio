@@ -11,7 +11,8 @@ const LoginSignup = () => {
 
 
   return (
-    <div className='container-login'>
+    <div className="container-login">
+    <div className='context-login'>
       <div className="header-login">
         <div className="text-login">{action}</div>
         <div className="underline-login"></div>
@@ -38,6 +39,7 @@ const LoginSignup = () => {
         <div className={action==="Login-login"?"submit-login gray":"submit-login"} onClick={()=> {setAction("Sign Up")}}>Sign Up</div>
         <div className={action==="Sign Up-login"? "submit-login gray": "submit-login"} onClick={()=> {setAction("Login")}}>Login</div>
       </div>
+    </div>
     </div>
   )
 }
