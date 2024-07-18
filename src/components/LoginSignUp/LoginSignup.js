@@ -1,5 +1,9 @@
 import React, { act, useState } from 'react'
 import './LoginSignup.css';
+import person from './person.png';
+import password from './Password.jpg';
+import email from './Email.jpg'
+
 
 const LoginSignup = () => {
 
@@ -14,16 +18,16 @@ const LoginSignup = () => {
       </div>
       <div className="inputs-login">
         {action==="Login-login"?<div></div>:<div className="input-login">
-          <img src={'./components/images/Person'} alt="" />
+          <img src={person} alt="" />
           <input type="text" placeholder='Name'/>
         </div>}
         
         <div className="input-login">
-          <img src="" alt="" />
+          <img src={email} alt="" />
           <input type="email" placeholder='Email ID'/>
         </div>
         <div className="input-login">
-          <img src="" alt="" />
+          <img src={password} alt="" />
           <input type="password" placeholder='Password'/>
         </div>
       </div>

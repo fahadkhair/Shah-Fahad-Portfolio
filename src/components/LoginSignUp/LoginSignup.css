@@ -47,8 +47,9 @@
     border-radius: 6px;
 }
 
-.input-img-login{
+.input-login img{
     margin: 0px 30px;
+    width: 30px;
 }
 
 .input-login input{

@@ -39,7 +39,7 @@ export default function Navbar() {
                                 <Link className="nav-link" style={{ color: 'white', fontWeight: 'bold' }} to="/About">About</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" style={{ color: 'white', fontWeight: 'bold' }} to="/Contact">Contact</Link>
+                                <Link className="nav-link" style={{ color: 'white', fontWeight: 'bold' }} to="/components/Contact/Contact">Contact</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" style={{ color: 'white', fontWeight: 'bold' }} to="/components/LoginSignUp/LoginSignup">Login</Link>

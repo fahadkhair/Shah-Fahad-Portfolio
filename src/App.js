@@ -7,7 +7,7 @@ import Text from './components/Text';
 import ButtonChange from './components/ButtonChange';
 import ClickComponent from './components/useeffectcomponets/ClickComponent';
 import UseEffect from './components/useeffectcomponets/UseEffect';
-import Home from './components/Home';
+import Contact from './components/Contact/Contact';
 // import DarkModeToggle from '/DarkModeToggle';
 
 import {
@@ -53,8 +53,8 @@ function App() {
         <Route path='/ClickComponent' element={<ClickComponent />} /> 
         <Route path="/about" element={<About />} />
         <Route path='/useEffect' element={<UseEffect />} />
-        {/* <Route path='/home' element={<Home />} /> */}
         <Route path='/components/LoginSignUp/LoginSignup' element={<LoginSignup />} />
+        <Route path='/components/Contact/Contact' element={<Contact />} />
       </Routes>
     </Router>
   );
