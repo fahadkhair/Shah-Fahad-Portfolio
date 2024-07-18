@@ -5,6 +5,9 @@ import Navbar from './components/Navbar';
 import About from './components/About';
 import Text from './components/Text';
 import ButtonChange from './components/ButtonChange';
+import ClickComponent from './components/useeffectcomponets/ClickComponent';
+import UseEffect from './components/useeffectcomponets/UseEffect';
+import Home from './components/Home';
 // import DarkModeToggle from '/DarkModeToggle';
 
 import {
@@ -13,6 +16,8 @@ import {
   Routes,
   Link
 } from "react-router-dom";
+import DataFetcher from './components/DataFetcher';
+import LoginSignup from './components/LoginSignUp/LoginSignup';
 
 function App() {
   const [data, setData] = useState([]);
@@ -37,14 +42,19 @@ function App() {
   };
 
   return (
+
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/about" element={<About />} />
         <Route path="/list" element={<List />} />
         <Route path="/text" element={<Text />} />
         <Route path="/ButtonChange" element={<ButtonChange />} />
-        {/* <DarkModeToggle /> */}
+        <Route path='/DataFetcher' element={<DataFetcher />} />
+        <Route path='/ClickComponent' element={<ClickComponent />} /> 
+        <Route path="/about" element={<About />} />
+        <Route path='/useEffect' element={<UseEffect />} />
+        {/* <Route path='/home' element={<Home />} /> */}
+        <Route path='/components/LoginSignUp/LoginSignup' element={<LoginSignup />} />
       </Routes>
     </Router>
   );

@@ -153,7 +153,7 @@ function List() {
             <th style={{ padding: '10px', textAlign: 'left' }}>Email</th>
             <th style={{ padding: '10px', textAlign: 'left' }}>Link</th>
             <th style={{ padding: '10px', textAlign: 'left' }}>Password</th>
-            <th style={{ padding: '10px' }}>Actions</th>
+            <th style={{ padding: '5px', textAlign: 'center' }}>Actions</th>
           </tr>
         </thead>
         <tbody>
