@@ -9,6 +9,7 @@ import LoginSignup from './components/LoginSignUp/LoginSignup';
 import Contact from './components/Contact/Contact';
 import Home from './components/HomePage/Home';
 
+
 export const routes = [
   { path: '/list', element: <List /> },
   { path: '/text', element: <Text /> },

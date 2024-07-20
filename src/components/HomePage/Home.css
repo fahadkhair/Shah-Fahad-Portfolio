@@ -1,3 +1,131 @@
-.container-home {
-    background: linear-gradient( url('/background.jpg'));
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+    position: relative;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Default direction */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between content and image */
+}
+
+.content {
+    margin-top: 10%;
+    max-width: 600px;
+}
+
+.content h1 {
+    font-size: 70px;
+    color: #222;
+}
+
+.content p {
+    margin: 10px 0;
+    color: #333;
+    animation-delay: 0.5s;
+    font-size: 30px;
+}
+
+.content .home-btn {
+    padding: 10px 80px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    background-image: linear-gradient(45deg, #df4881, #c430d7);
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: 0.5s;
+    animation-delay: 1s;
+    margin-bottom: 10px;
+}
+
+.content a {
+    margin-top: 20px;
+}
+
+.home-btn:hover {
+    border-top-right-radius: 30px;
+}
+
+.home-dp {
+    width: 330px;
+    position: relative; /* Changed to relative */
+}
+
+.home-dp.anim {
+    animation-delay: 0.8s;
+}
+
+.anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Stack items in a column */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .content {
+        margin-top: 20%; /* Adjust margin for better spacing */
+        text-align: center; /* Center text */
+    }
+
+    .content h1 {
+        font-size: 50px; /* Smaller font size for smaller screens */
+    }
+
+    .content p {
+        font-size: 20px; /* Smaller font size for smaller screens */
+    }
+
+    .content .home-btn {
+        padding: 10px 40px; /* Adjust button padding */
+        font-size: 14px; /* Smaller font size for button */
+    }
+
+    .home-dp {
+        width: 250px; /* Smaller image size */
+        margin-top: 20px; /* Add margin for spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 30px; /* Even smaller font size for very small screens */
+    }
+
+    .content p {
+        font-size: 16px; /* Adjust paragraph font size */
+    }
+
+    .content .home-btn {
+        padding: 10px 20px; /* Further reduce button padding */
+        font-size: 12px; /* Smaller font size for button */
+    }
+
+    .home-dp {
+        width: 200px; /* Further reduce image size */
+        margin-top: 20px; /* Add margin for spacing */
+    }
 }
