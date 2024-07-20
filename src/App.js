@@ -69,7 +69,6 @@ import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { routes } from './routes';
-import Home from './components/HomePage/Home'
 
 function App() {
   const [data, setData] = useState([]);
@@ -94,17 +93,16 @@ function App() {
   };
 
   return (
-    <Router>
+    <div>
+      <Router>
       <Navbar />
-      <div>
-      <Home />
-      </div>
-      <Routes>
-        {routes.map((route, index) => (
-          <Route key={index} path={route.path} element={route.element} />
-        ))}
-      </Routes>
-    </Router>
+        <Routes>
+          {routes.map((route, index) => (
+            <Route key={index} path={route.path} element={route.element} />
+          ))}
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
