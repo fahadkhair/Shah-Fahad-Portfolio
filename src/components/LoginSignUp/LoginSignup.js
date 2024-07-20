@@ -18,7 +18,7 @@ const LoginSignup = () => {
         <div className="underline-login"></div>
       </div>
       <div className="inputs-login">
-        {action==="Login-login"?<div></div>:<div className="input-login">
+        {action==="Login"?<div></div>:<div className="input-login">
           <img src={person} alt="" />
           <input type="text" placeholder='Name'/>
         </div>}
