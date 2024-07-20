@@ -58,7 +58,7 @@
 }
 
 .home-dp {
-    width: 330px;
+    width: 430px;
     position: relative; /* Changed to relative */
 }
 
@@ -70,6 +70,10 @@
     opacity: 0;
     transform: translateY(30px);
     animation: moveup 0.5s linear forwards;
+}
+
+img {
+    border-radius: 50%;
 }
 
 @keyframes moveup {
@@ -127,5 +131,8 @@
     .home-dp {
         width: 200px; /* Further reduce image size */
         margin-top: 20px; /* Add margin for spacing */
+        border-radius: 50%;
     }
+
+   
 }

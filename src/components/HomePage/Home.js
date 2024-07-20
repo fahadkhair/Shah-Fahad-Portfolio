@@ -1,5 +1,5 @@
 import React from 'react';
-import dpImage from '../images/DP4.jpg';
+import dpImage from '../images/DP14.jpg';
 import './Home.css';
 
 const Home = () => {
