@@ -1,4 +1,4 @@
-import React, { act, useState } from 'react'
+import React, {useState } from 'react'
 import './LoginSignup.css';
 import person from './person.png';
 import password from './Password.jpg';

@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 function About() {
   const [text, setText] = useState();
   const [showMessage, setShowMessage] = useState(false);
-  const [showText, setShowText] = useState(false);
+  // const [showText, setShowText] = useState(false);
 
   const onTextChange = (event) => {
     setText(event.target.value);

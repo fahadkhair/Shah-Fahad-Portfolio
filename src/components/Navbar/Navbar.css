@@ -1,0 +1,75 @@
+/* Fix the navbar at the top of the page */
+.navbar {
+    background-color: #001660; /* Deep blue background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensures the navbar stays on top of other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds shadow for depth */
+}
+
+a.nav-link {
+    color: green;
+}
+
+.navbar-logo {
+    width: 80px;
+    transition: transform 0.3s;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.1);
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px; /* Space between each nav item */
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-weight: 500;
+    padding: 12px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background-color: #004080; /* Darker blue for hover and active states */
+    color: #f0f0f0;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #001660;
+    border: none;
+}
+
+.navbar-nav .dropdown-item {
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: #004080;
+    color: #f0f0f0;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba(255,255,255,0.5)" stroke-width="2" d="M3 6h24M3 12h24M3 18h24M3 24h24"/%3E%3C/svg%3E');
+}
+
+/* Ensure there's enough padding at the top of the page content to prevent overlap with the fixed navbar */
+body {
+    padding-top: 70px; /* Adjust based on the height of your navbar */
+}
