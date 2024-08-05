@@ -108,7 +108,7 @@ function List() {
   return (
     <div className='container'>
       <div className='contain'>
-        <form onSubmit={handleAdd} style={{ marginBottom: '20px' }}>
+        <form onSubmit={handleAdd} >
           <input
             type="text"
             value={newItem}

@@ -8,6 +8,7 @@ import UseEffect from './components/useeffectcomponets/UseEffect';
 import LoginSignup from './components/LoginSignUp/LoginSignup';
 import Contact from './components/Contact/Contact';
 import Home from './components/HomePage/Home';
+import ToDoContext from './components/ToDoContext/ToDoContext';
 
 
 export const routes = [
@@ -20,5 +21,7 @@ export const routes = [
   { path: '/useeffect', element: <UseEffect /> },
   { path: '/login', element: <LoginSignup /> },
   { path: '/contact', element: <Contact /> },
+  { path: '/', element: <Home /> },
   { path: '/home', element: <Home /> },
+  { path: '/todo', element: <ToDoContext /> },
 ];

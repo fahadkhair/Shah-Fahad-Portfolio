@@ -1,9 +1,11 @@
-
+  
 import React, { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { routes } from './routes';
+import ReactDOM from 'react-dom';
+ import ThemeProvider from './components/ToDoContext/ToDoContext';
 
 function App() {
   const [data, setData] = useState([]);

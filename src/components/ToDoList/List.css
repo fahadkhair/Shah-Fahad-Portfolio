@@ -39,21 +39,24 @@ form {
 
 .form-input {
   width: 22%;
-  padding: 10px;
+  padding: 10px 10px 10px 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  margin: 20px 10px 1px 2px;
+
 }
 
 .add-btn {
   background-color: #007bff;
   color: #fff;
-  padding: 10px 20px;
+  /* padding: 0px 0px; */
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
-  height: 44px; /* Match input field height */
-  font-size: 14px; /* Reduce font size */
+  font-size: 18px; /* Reduce font size */
+  margin-top: 2rem;
+  width: 5rem;
 }
 
 .add-btn:hover {

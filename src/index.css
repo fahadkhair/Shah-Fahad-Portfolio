@@ -156,6 +156,27 @@ body {
   padding-top: 70px; /* Adjust based on the height of your navbar */
 }
 
+.panel-light {
+  background-color: white;
+  color: black;
+}
+
+.panel-dark {
+  background-color: black;
+  color: white;
+}
+
+.button-light {
+  background-color: white;
+  color: black;
+}
+
+.button-dark {
+  background-color: black;
+  color: white;
+}
+
+
 /* Mobile first queries */
 
 /* Larger than mobile */
